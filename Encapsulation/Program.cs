@@ -6,8 +6,8 @@ namespace Encapsulation
     {
         static void Main(string[] args)
         {
-            Eat bread = new Eat() { Name = "bread" ,maxTemp = 45};
             Microwave microwave = new Microwave();
+            Eat bread = new Eat("bread",45);
             microwave.warm(bread, 56);
             bread.getInfo();
             Console.WriteLine("Hello World!");

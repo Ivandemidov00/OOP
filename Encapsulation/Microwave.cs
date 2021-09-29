@@ -4,18 +4,18 @@ namespace Encapsulation
 {
     public class Microwave
     {
-        private Int32 temp = 0;
+        private Int32 temp { get; set; } = 0;
         public Int32 setTemp(Int32 setTemp) => setTemp > 0 ? temp = setTemp:temp;
         public Eat warm(Eat eat, Int32 temp)
         {
-            if (eat.maxTemp <= eat.temp+setTemp(temp))
+            if (eat.getTemp() <= eat.getTemp()+setTemp(temp))
             {
-                eat.Name = "сгорело";
-                eat.temp += setTemp(temp);
+                eat.setName("сгорело");
+                eat.setTemp(setTemp(temp));
             }
             else
             {
-                eat.temp += setTemp(temp);
+                eat.setTemp(setTemp(temp));
             }
 
             return eat;
