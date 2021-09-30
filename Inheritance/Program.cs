@@ -6,7 +6,7 @@ namespace Inheritance
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            People people = new People("dfgd",90);
             Car lada = new Lada();
             Lada ladaTwo = new Lada();
             var ladaVar = new Lada();
@@ -17,6 +17,7 @@ namespace Inheritance
             ladaTwo.Stop();
             ladaTwo.Crash();
             ladaVar.Move();
+            people.Hello();
             
             
         }
